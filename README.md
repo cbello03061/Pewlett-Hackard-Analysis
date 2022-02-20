@@ -1,38 +1,36 @@
-# World Weather Analysis
+# Pewlett-Hackard-Analysis
 
+## Objective
+The goal is to determine the number of retiring employees per title, and identify employees who are eligible to participate in a mentorship program.
 
-## Objective of the analysis project
-The objective of this repository is to integrate into Python the genius of using APIs, after performing this analysis it is very clear how through an API we can obtain information in an easy and simple way to be manipulated.
+## Background
 
-## Weather Database
+6 files separated by commas are provided with the information that will allow determining the data that the company needs. As a first step, 6 tables are created in PGAdmin to import those files and make it easier to manipulate the information. A relationship diagram is created from the generated tables, which is shown in the following image.
 
-Weather Database, was developed to obtain 2000 random latitudes, which allowed us to generate a database with all the cities that were in those generated latitudes, this database was the basis of the analysis that was developed and that will be detailed below. .
-The generated city database was called "Weather_database" and is a comma separated file.
+image1[https://github.com/cbello03061/Pewlett-Hackard-Analysis/blob/main/Challenge/Pewlett-Hackard-Analysis/Resources/EmployeeDB.png]
 
-As shown in the following image, a routine had to be created that read the coordinates in conjunction with the cities API to obtain the cities database, the output of the generated code. iImage 1
-image1 [https://github.com/cbello03061/World_Weather_Analysis/blob/main/cities.png]
+The information contained in the tables is the base information to generate our analysis and determine all the important points that will generate value for the company.
 
-## Vacations Search
+## Information requested for analysis
 
-Through this development, the location of the nearby hotels according to the coordinates was determined with the weather database and the GMPAS API, with the aim of providing the possible visitor with the nearby hotels and with a type of climate according to their tastes. in order to show those destinations on a marker layer map with pop-up markers. By having to provide the visitor with an image, it allows you to generate attraction for the destination, as well as for the hotel combined with the weather that will exist at the time of the trip.
+### Regtrieve employees and tittles bethwen 1952 to 1955
 
-The map that is shown to the visitor is as it can be seen in the following image, since it allows him to locate on the map the points where the hotels are located, the name of the city, the country and the current climate, so the visitor can make a very simple planning of your next trip
-image[https://github.com/cbello03061/World_Weather_Analysis/blob/main/challenge/vacation_search/WeatherPy_vacation_map.png]
+First you must get all the employees whose birth dates are between January 1, 1965 and December 31, 1965 and generate a table that contains all the information as shown in the following image.
 
+image [https://github.com/cbello03061/Pewlett-Hackard-Analysis/blob/main/Challenge/Pewlett-Hackard-Analysis/Resources/retirement_titles.png]
 
+### Delete duplicate rows
 
-## Vacations Itinerary
+The obtained table had to be manipulated to eliminate duplicate data and thus be able to obtain the information of the total of the job titles as shown in the following table.
 
-Once the visitor has already chosen a place to make his next trip thanks to the information provided, the following development will allow him to have an itinerary with a clear route according to the cities he wants to visit, the objective is to make an extraordinary experience, since , having all the important data of the trip the user his next step, it is only to enjoy each point that he visits without worrying more than taking the routes provided by our tool.
+image[https://github.com/cbello03061/Pewlett-Hackard-Analysis/blob/main/Challenge/Pewlett-Hackard-Analysis/Resources/retiring_title.png]
 
-The first step to help the traveler is to choose from the number of hotels and cities that we previously provided, which ones they are interested in visiting.
+### Mentorship Eligible
 
-image2[https://github.com/cbello03061/World_Weather_Analysis/blob/main/challenge/Vacation_Itinerary/WeatherPy_travel_map_markers.png.png]
+Create a Mentorship Eligibility table for current employees who were born between January 1, 1965 and December 31, 1965. 
 
-Once you have chosen the cities and hotels to visit, you must provide us with the starting point and the return point, as well as the cities you will visit in between so that we can help you by providing you with an itinerary that you can view on the map.
+Image [https://github.com/cbello03061/Pewlett-Hackard-Analysis/blob/main/Challenge/Pewlett-Hackard-Analysis/Resources/mentorship_eligibilty.png]
 
-In the following image we can see an itinerary with the points mentioned by the traveler.
-Image 3 [https://github.com/cbello03061/World_Weather_Analysis/blob/main/challenge/Vacation_Itinerary/WeatherPy_travel_map.png]
+## Analysis
 
-## Conclusion
-The power of APIs have come to revolutionize the world of data, they are so powerful because of the amount of information they contain, because of the easy way for a professional to manipulate that information that after learning about its majesty if there is a before and a after obtaining the information.
+By manipulating the initial information and creating new tables, they realize that Pewlet-Hackard has a great challenge, since a significant number of staff are about to retire. The challenges it faces are many, because the knowledge of the company, the processes and the experience of the eligible personnel will be taken with them at the time of their retirement. Although the challenge is great, whenever there is this type of change that is so significant for the company, it is time to reinvent itself and make reprocesses with the personnel that still lack time for their retirement and new personnel, which, always new ideas inject life to the business model.
